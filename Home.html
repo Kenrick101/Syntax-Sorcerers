@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>WaTT</title>
+  <style>
+
+    body{ 
+      background-color: #080710;
+      color: white;
+      font-family: 'Poppins',sans-serif;
+      margin:0px;
+      margin-top:0px;
+      padding: 0px;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity: 0;
+      }
+
+      to{
+        opacity: 1;
+      }
+    }
+
+    nav{
+      background-color: rgba(255,255,255,0.13);
+      width: 100%;
+      height: 100px;
+      border-radius: 2px 2px 2px 2px;
+      backdrop-filter: blur(2px);
+      border: 2px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 40px rgba(8,7,16,0.6);
+      position: relative;
+      opacity: 0;
+      animation: fadeIn 1s ease-in;
+      animation-delay: 4s;
+      animation-fill-mode: forwards;
+    }
+
+    nav h2{
+      color: white;
+      font-size: 25px;
+      text-align: right;
+      padding-right: 50px;
+      padding-top: 15px;
+      font-family: 'Poppins',sans-serif;
+      float: right;
+    }
+
+    nav h1{
+      color: white;
+      font-size: xx-large;
+      padding-top: 5px;
+      padding-left: 20px;
+      font-family: 'Poppins',sans-serif;
+      display: inline-block;
+      position: relative;
+    }
+
+    a{
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    a:hover{
+      color: rgb(133, 125, 125);
+    }
+
+    nav img{
+      padding-top: 25px;
+      padding-left: 25px;
+      width: 180px;
+    }
+
+    .flex-col{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-container{
+      width: 100%;
+      height: 60vh;
+      align-items: center;
+    }
+
+    .hero-heading
+    {
+      margin-top: 100px;
+      font-size: x-large;
+      animation: fadeIn 1s ease-in;
+      opacity: 0;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    .hero-body{
+      font-size: larger;
+      animation: fadeIn 1s ease-in;
+      animation-delay: 3s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .products-container{
+      width: 100%;
+      height: 100vh;
+      background-color: white;
+      color: black;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s ease-in;
+      animation-delay: 4s;
+      animation-fill-mode: forwards;
+      padding-top: 10px;
+    }
+
+    .products-title{
+      margin-top: 50px;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="WaTT_Logo.png">
+    <h2><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></h2>
+    <h2><a href="Register.html">Register</a></h2>
+    <h2><a href="Login.html">Login</a></h2>
+  </nav>
+
+  <div class="hero-container flex-col">
+    <div class="hero-heading"><h1>Feeling Stuck in the Dark?</h1></div>
+    <div class="hero-body"><h2>With us the lights stay on.</h2></div>
+  </div>
+
+  <div class="products-container">
+    <h2 class="products-title">Our Products</h2>
+  </div>
+
+</body>
+</html>
