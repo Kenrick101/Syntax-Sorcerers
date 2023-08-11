@@ -35,10 +35,6 @@
       border: 2px solid rgba(255,255,255,0.1);
       box-shadow: 0 0 40px rgba(8,7,16,0.6);
       position: relative;
-      opacity: 0;
-      animation: fadeIn 1s ease-in;
-      animation-delay: 2s;
-      animation-fill-mode: both;
     }
 
     nav h2{
@@ -83,16 +79,27 @@
     }
 
     .hero-container{
-      width: 100%;
       height: 60vh;
       align-items: center;
+      justify-content: center;
+      background-image: url("images/solar-panels.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    .hero-content{
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+      height: 90%;
+      border-radius: 15px;
+      background-color: rgba(8,7,16, 0.9);
     }
 
     .hero-heading
     {
-      margin-top: 100px;
       font-size: x-large;
-      animation: fadeIn 1s ease-in;
+      animation: fadeIn 0.5s ease-in;
       opacity: 0;
       animation-delay: 1s;
       animation-fill-mode: forwards;
@@ -100,8 +107,15 @@
 
     .hero-body{
       font-size: larger;
-      animation: fadeIn 1s ease-in;
-      animation-delay: 1.5s;
+      animation: fadeIn 0.5s ease-in;
+      animation-delay: 2s;
+      opacity: 0;
+      animation-fill-mode: both;
+    }
+
+    .light-bulb{
+      animation: fadeIn 0.5s ease-in;
+      animation-delay: 3s;
       opacity: 0;
       animation-fill-mode: both;
     }
@@ -112,10 +126,6 @@
       background-color: white;
       color: black;
       text-align: center;
-      opacity: 0;
-      animation: fadeIn 1s ease-in;
-      animation-delay: 2s;
-      animation-fill-mode: both;
       padding-top: 10px;
     }
 
@@ -146,8 +156,11 @@
   </nav>
 
   <div class="hero-container flex-col">
-    <div class="hero-heading"><h1>Feeling Stuck in the Dark?</h1></div>
-    <div class="hero-body"><h2>With us the lights stay on.</h2></div>
+    <div class="hero-content flex-col">
+        <div class="hero-heading"><h1>Feeling Stuck in the Dark?</h1></div>
+        <div class="hero-body"><h2>With us the lights stay on.</h2></div>
+        <img class="light-bulb" src="./images/light-bulb-svgrepo-com.svg" alt="light bulb" height="150px">
+    </div>
   </div>
 
   <div class="products-container">
