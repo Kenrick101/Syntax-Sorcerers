@@ -28,18 +28,11 @@
     }
 
     nav{
-      background-color: rgba(255,255,255,0.13);
-      
       height: 100px;
       border-radius: 2px 2px 2px 2px;
-      backdrop-filter: blur(2px);
-      border: 2px solid rgba(255,255,255,0.1);
-      box-shadow: 0 0 40px rgba(8,7,16,0.6);
-      position: relative;
-      opacity: 0;
-      animation: fadeIn 1s ease-in;
-      animation-delay: 2s;
-      animation-fill-mode: both;
+      align-self: flex-start;
+      position: fixed;
+      z-index: 1;
     }
 
     nav h2{
@@ -84,7 +77,7 @@
     }
 
     .hero-container{
-      height: 60vh;
+      height: 100vh;
       align-items: center;
       justify-content: center;
       background-image: url("images/solar-panels.jpg");
@@ -93,27 +86,26 @@
     }
 
     .hero-content{
-      width: 60%;
+      width: 100%;
       justify-content: center;
       align-items: center;
-      height: 90%;
-      border-radius: 15px;
-      background-color: rgba(8,7,16, 0.6);
+      height: 100%;
+      background-color: rgba(8,7,16, 0.5);
     }
 
     .hero-heading
     {
-      font-size: x-large;
-      animation: fadeIn 0.5s ease-in;
+      font-size: medium;
+      font-weight: 100;
+      animation: fadeIn 1s ease-in;
       opacity: 0;
-      animation-delay: 1s;
       animation-fill-mode: forwards;
     }
 
     .hero-body{
-      font-size: larger;
-      animation: fadeIn 1s ease-in;
-      animation-delay: 1.5s;
+      font-size: small;
+      animation: fadeIn 0.5s ease-in;
+      animation-delay: 1s;
       opacity: 0;
       animation-fill-mode: forwards;
     }
@@ -124,11 +116,18 @@
       background-color: white;
       color: black;
       text-align: center;
-      opacity: 0;
-      animation: fadeIn 1s ease-in;
-      animation-delay: 2s;
-      animation-fill-mode: both;
       padding-top: 10px;
+      animation: fadeIn 0.5s ease-in;
+      opacity: 0;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+    
+    .light-bulb{
+      animation: fadeIn 0.5s ease-in;
+      animation-delay: 1s;
+      opacity: 0;
+      animation-fill-mode: forwards;
     }
 
     .products-title{
@@ -150,15 +149,14 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/Home.html"><img src="./images/WaTT_Logo.png"></a>
-    <h2><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></h2>
-    <h2><a href="Register.html">Register</a></h2>
-    <h2><a href="Login.html">Login</a></h2>
-  </nav>
-
   <div class="hero-container flex-col">
     <div class="hero-content flex-col">
+      <nav>
+        <a href="/Home.html"><img src="./images/WaTT_Logo.png"></a>
+        <h2><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></h2>
+        <h2><a href="Register.html">Register</a></h2>
+        <h2><a href="Login.html">Login</a></h2>
+      </nav>
         <div class="hero-heading"><h1>Feeling Stuck in the Dark?</h1></div>
         <div class="hero-body"><h2>With us the lights stay on.</h2></div>
         <img class="light-bulb" src="./images/light-bulb-svgrepo-com.svg" alt="light bulb" height="150px">
