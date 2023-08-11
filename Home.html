@@ -29,12 +29,17 @@
 
     nav{
       background-color: rgba(255,255,255,0.13);
+      
       height: 100px;
       border-radius: 2px 2px 2px 2px;
       backdrop-filter: blur(2px);
       border: 2px solid rgba(255,255,255,0.1);
       box-shadow: 0 0 40px rgba(8,7,16,0.6);
       position: relative;
+      opacity: 0;
+      animation: fadeIn 1s ease-in;
+      animation-delay: 2s;
+      animation-fill-mode: both;
     }
 
     nav h2{
@@ -107,17 +112,10 @@
 
     .hero-body{
       font-size: larger;
-      animation: fadeIn 0.5s ease-in;
-      animation-delay: 2s;
+      animation: fadeIn 1s ease-in;
+      animation-delay: 1.5s;
       opacity: 0;
-      animation-fill-mode: both;
-    }
-
-    .light-bulb{
-      animation: fadeIn 0.5s ease-in;
-      animation-delay: 2s;
-      opacity: 0;
-      animation-fill-mode: both;
+      animation-fill-mode: forwards;
     }
 
     .products-container{
@@ -126,6 +124,10 @@
       background-color: white;
       color: black;
       text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s ease-in;
+      animation-delay: 2s;
+      animation-fill-mode: both;
       padding-top: 10px;
     }
 
@@ -149,7 +151,7 @@
 </head>
 <body>
   <nav>
-    <img src="./images/WaTT_Logo.png">
+    <a href="/Home.html"><img src="./images/WaTT_Logo.png"></a>
     <h2><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></h2>
     <h2><a href="Register.html">Register</a></h2>
     <h2><a href="Login.html">Login</a></h2>
