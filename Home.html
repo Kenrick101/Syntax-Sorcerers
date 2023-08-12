@@ -6,6 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>WaTT</title>
+
+  <script>
+    function changeCss () {
+   var navElement = document.querySelector("nav");
+   if(this.scrollY > 1)
+   {
+    
+     navElement.style.backgroundColor = "dimgrey";
+   }
+   else
+   {
+      navElement.style.backgroundColor = "";
+   }
+}
+
+  window.addEventListener("scroll", changeCss , false);
+  </script>
+
   <style>
 
     body{ 
