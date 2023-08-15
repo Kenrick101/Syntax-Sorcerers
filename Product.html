@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgb(88, 83, 83);
+    }
+    section{
+      position: relative;
+      height: 450px;
+      width: 1075px;
+      display: flex;
+      align-items: center;
+    }
+    .swiper{
+      width: 950px;
+    }
+
+    .card{
+      position: relative;
+      background: #fff;
+      border-radius: 20px;
+      height: 400px;
+      margin: 20px 0;
+      box-shadow: 0 5px 1px black;
+    }
+    .card::before{
+      content: "";
+      position: absolute;
+      height: 40%;
+      width: 100%;
+      background: white;
+      border-radius: 20px 20px 0 0;
+    }
+    .card .card-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      position: relative;
+      z-index: 100;
+    }
+    section .card .image{
+      width: 225px;
+      padding: 3px;
+      margin-top: 30px;
+    }
+    section .card .image img{
+      height:100%;
+      width: 100%;
+      object-fit: cover;
+      border: 3px solid #fff;
+    }
+    .card .name-Product{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 70px;
+      color: black;
+    }
+    .name-Product .name{
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .swiper-pagination{
+      position: absolute;
+      top: 450px;
+    }
+    .swiper-pagination-bullet{
+      height: 7px;
+      width: 26px;
+      border-radius: 25px;
+      background: rgb(5, 5, 5);
+    }
+    .swiper-button-next, .swiper-button-prev{
+      opacity: 0.7;
+      color: rgb(24, 24, 24);
+      transition: all 0.3s ease;
+    }
+    .swiper-button-next:hover, .swiper-button-prev:hover{
+      opacity: 1;
+      color: rgb(224, 219, 219);
+    }
+
+
+  </style>
+</head>
+<body>
+  <section>
+    <div class="swiper mySwiper container">
+      <div class="swiper-wrapper content">
+
+        <!-- 1ST -->
+        <div class="swiper-slide card">
+          <div class="card-content">
+
+            <div class="image">
+              <img src="Picture4.png">
+            </div>
+
+            <div class="name-Product">
+              <span class="name">GENERATOR</span>
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- 2ND -->
+        <div class="swiper-slide card">
+          <div class="card-content">
+
+            <div class="image">
+              <img src="Picture5.png">
+            </div>
+
+            <div class="name-Product">
+              <span class="name">INVERTER</span>
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- 3RD -->
+        <div class="swiper-slide card">
+          <div class="card-content">
+
+            <div class="image">
+              <img src="Picture6.png">
+            </div>
+
+            <div class="name-Product">
+              <span class="name">SOLAR-PANELS</span>
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- 4TH -->
+        <div class="swiper-slide card">
+          <div class="card-content">
+
+            <div class="image">
+              <img src="Picture7.png">
+            </div>
+
+            <div class="name-Product">
+              <span class="name">POWER BANKS</span>
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- 5TH -->
+        <div class="swiper-slide card">
+          <div class="card-content">
+
+            <div class="image">
+              <img src="Picture8.png">
+            </div>
+
+            <div class="name-Product">
+              <span class="name">LIGHTS</span>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- 6TH -->
+        <div class="swiper-slide card">
+          <div class="card-content">
+
+            <div class="image">
+              <img src="Picture9.png">
+            </div>
+
+            <div class="name-Product">
+              <span class="name">OTHER</span>
+            </div>
+            
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: false,
+    pagination:{
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation:{
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  </script>
+</body>
+</html>
