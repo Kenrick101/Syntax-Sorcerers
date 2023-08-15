@@ -1,0 +1,86 @@
+body{ 
+    background-color: #080710;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    margin:0px;
+    margin-top:0px;
+    padding: 0px;
+  }
+
+  .flex-col{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-row{
+    display: flex;
+  }
+
+  .grid{
+    display: grid;
+  }
+
+  .nav-bar{
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    transition: 0.3s
+  }
+
+  .row
+  {
+    background-color: rgba(8,7,16, 0.5);
+  }
+
+  a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: rgb(22, 185, 235);
+  }
+
+  .logo{
+    width: 90px;
+
+  }
+
+  .logo-container{
+    padding-left: 20px;
+  }
+
+  .nav-options{
+    gap: 20px;
+    justify-content: flex-end;
+    padding-right: 40px;
+  }
+
+  .nav-options h2{
+    font-size: small;
+  }
+
+  .search-container
+  {
+    align-self: center;
+  }
+
+  .search-bar{
+    border-radius: 20px;
+    border: none;
+    padding: 4px;
+    padding-left: 10px;
+    width: 250px;
+  }
+
+  .fa-shopping-cart{
+    font-size: medium;
+  }
+
+  img:hover{
+    transform: translateY(3px);
+  }   
