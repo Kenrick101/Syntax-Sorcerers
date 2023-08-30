@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./style.css">
-  <title>WaTT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./product-page(style).css">
 
-  <script src="./script.js"></script>
+  <title>WaTT</title>
 
   <style>
 
@@ -68,15 +68,6 @@
       opacity: 0;
       animation-fill-mode: forwards;
     }
-
-    .products-container{
-      width: 100%;
-      height: 100vh;
-      background-color: white;
-      color: black;
-      text-align: center;
-      padding-top: 10px;
-    }
     
     .light-bulb{
       animation: fadeIn 0.5s ease-in;
@@ -88,6 +79,8 @@
 
     .products-title{
       margin-top: 50px;
+      color: black;
+      text-align: center;
     }
 
     .products-title::after{
@@ -101,6 +94,29 @@
       left: 50%;
       transform: translate(-50%);
     } 
+
+    .product-category-grid
+    {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 0.7fr));
+      gap: 50px;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .product-category
+    {
+      height: 400px;
+      background-color: #2C3639;
+      color: aliceblue;
+      text-align: center;
+    }
+
+    .category-title
+    {
+      margin-top: 30px;
+    }
 
 
   </style>
@@ -137,9 +153,69 @@
     </div>
   </div>
 
-  <div class="products-container">
-    <h2 class="products-title">Our Products</h2>
+  <h2 class="products-title">Our Products</h2>
+
+  <div class="product-category-grid">
+    <a href="./Product-Page(Generators).html"><div class="product-category product-container flex-col">
+      <div class="product-img flex-col"><img src="./images/generator_pic.png" alt="Generator Product" width="200px"></div>
+            <div class="product-info-container flex-col">
+                <h2 class="category-title">Generators</h2>
+            </div>
+    </div></a>
+    <a href="./product-page(solar-panels).html"><div class="product-category product-container flex-col">
+      <div class="product-img flex-col"><img src="./images/icon_solar-panel.png" alt="Solar Panel Product" width="200px"></div>
+            <div class="product-info-container flex-col">
+                <h2 class="category-title">Solar Panels</h2>
+            </div>
+    </div></a>
+    <a href="#"><div class="product-category product-container flex-col">
+      <div class="product-img flex-col"><img src="images/Picture5.png" alt="Inverter Product" width="200px"></div>
+            <div class="product-info-container flex-col">
+                <h2 class="category-title">Inverters</h2>
+            </div>
+    </div></a>
+    <a href="#"><div class="product-category product-container flex-col">
+      <div class="product-img flex-col"><img src="./images/Picture7.png" alt="Power Bank Product" width="200px"></div>
+            <div class="product-info-container flex-col">
+                <h2 class="category-title">Power Banks</h2>
+            </div>
+    </div></a>
+    <a href="#"><div class="product-category product-container flex-col">
+      <div class="product-img flex-col"><img src="./images/Picture8.png" alt="Lights Product" width="200px"></div>
+            <div class="product-info-container flex-col">
+                <h2 class="category-title">Lights</h2>
+            </div>
+    </div></a>
+    <a href="#"><div class="product-category product-container flex-col">
+      <div class="product-img flex-col"><img src="./images/Picture9.png" alt="Other Product" width="200px"></div>
+            <div class="product-info-container flex-col">
+                <h2 class="category-title">Other</h2>
+            </div>
+    </div></a>
   </div>
+
+
+
+  <div class="footer-basic">
+    <footer>
+        <div class="social">
+          <a href="#"  id="Insta"><i class="icon ion-social-instagram"></i></a>
+          <a href="#" id="Twit"><i class="icon ion-social-twitter"></i></a>
+          <a href="#" id="Face"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">WaTT - All rights reserved © 2023</p>
+    </footer>
+</div>
+<script src="./script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
