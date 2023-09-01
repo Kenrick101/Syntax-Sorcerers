@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 
   <style media="screen">
     *,
@@ -200,14 +201,21 @@
   </style>
 </head>
 <body>
-    <div class="navbar">
-        <nav>
-            <ul>
-                <li><h1><a href="Home.html">Home</a><h1></li>
-                <li><h1><a href="Login.html">Login</a></h1></li>
-            </ul>
-        </nav>
+
+    <div class="row">
+    <div class="nav-bar grid">
+        <div class="logo-container"><a href="/Home.html"><img class="logo" src="./images/WaTT_Logo.png"></a></div>
+        <div class="flex-row nav-options">
+          
+          <div><h2><a href="">Products</a></h2></div>
+          <div><h2>|</h2></div>
+          <div><h2><a href="">About Us</a></h2></div>
+          <div><h2>|</h2></div>
+          <div><h2><a href="Login.html">Login</a></h2></div>
+          
+        </div>
     </div>
+  </div>
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
@@ -238,5 +246,6 @@
       <button type="submit">Register</button>
 
     </form>
+    <script src="/script.js"></script>
 </body>
 </html>
