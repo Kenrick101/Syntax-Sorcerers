@@ -30,6 +30,10 @@ body{
     transition: 0.3s
   }
 
+  .nav-bar:hover{
+    background-color: black;
+  }
+
   .row
   {
     background-color: rgba(8,7,16, 0.5);
@@ -40,6 +44,12 @@ body{
     cursor: pointer;
     text-decoration: none;
   }
+
+  input:focus,
+    input:hover{
+      background-color: #080710ab;
+      border: 2px solid white;
+    }
 
   a:hover{
     color: rgb(22, 185, 235);
@@ -62,6 +72,7 @@ body{
 
   .nav-options h2{
     font-size: small;
+    margin-top: 5px;
   }
 
   .search-container
