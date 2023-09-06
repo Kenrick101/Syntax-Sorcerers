@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMasterPage.master.cs" Inherits="Watt_Front_end.SiteMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+
+    <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./product-page(style).css">
+
+  <title>WaTT</title>
+
+    <style>
+
+        @keyframes fadeIn{
+      from{
+        transform: translateY(-5px);
+        opacity: 0;
+      }
+
+      to{
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }    
+
+    .hero-container{
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      grid-column: span -1;
+      grid-row: span 2;
+    }
+
+    .hero-content{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .hero-heading
+    {
+      font-size: x-large;
+      font-weight: 100;
+      animation: fadeIn 0.5s ease-in;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      text-align: center;
+    }
+
+    .hero-body{
+      color: white;
+      font-size: small;
+      animation: fadeIn 0.5s ease-in;
+      animation-delay: 1s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+      
+
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+
+            <div class="grid main-banner">
+    <div class="row">
+      <div class="nav-bar grid">
+          <div class="logo-container"><a href="Index.aspx"><img class="logo" src="./images/WaTT_Logo.png"></a></div>
+          <div class="flex-row nav-options">
+            <div class="search-container"><input class="search-bar" type="search" placeholder="Looking for something?"></div>
+            <div><h2>|</h2></div>
+            <div><h2><a href="">Products</a></h2></div>
+            <div><h2>|</h2></div>
+            <div><h2><a href="">About Us</a></h2></div>
+            <div><h2>|</h2></div>
+            <div><h2><a href="Login.aspx">Login</a></h2></div>
+            <div><h2>|</h2></div>
+            <div><h2><a href="Register.aspx">Register</a></h2></div>
+            <div><h2>|</h2></div>
+            <div><h2><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></h2></div>
+          </div>
+      </div>
+    </div>
+     
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+                <div class="footer-basic">
+    <footer>
+        <p><a href="#">Home</a>  |  <a href="#">Services</a>  |  <a href="#">About</a>  |  <a href="#">Terms</a>  |  <a href="#">Privacy Policy</a></p>
+
+        <p class="copyright">WaTT - All rights reserved © 2023</p>
+    </footer>
+</div>
+<script src="./script.js"></script>
+
+
+        </div>
+    </form>
+</body>
+</html>
