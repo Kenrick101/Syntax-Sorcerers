@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" class="css">
+  <title>--Product name--</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Poppins',sans-serif;
+  }
+
+  .small-container{
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 20px;
+  }
+  .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .single-product{
+    margin-top: 80px;
+  }
+  .col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+  }
+
+  .single-product .col-2 img{
+    padding: 0;
+  }
+
+  .single-product .col-2{
+    padding: 20px;
+  }
+  .col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+
+  }
+  .col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+  }
+  .single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .single-product h4{
+    margin-top: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+  } 
+  .single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #000000;
+
+  } 
+  input:focus{
+    outline: none;
+  }
+  a{
+    text-decoration: none;
+    color: #555;
+  }
+  .single-product .fa{
+    color: #41c257;
+    margin-left: 10px;
+  }
+  p{
+    color: #000000;
+  }
+  .btn{
+    display: inline-block;
+    background-color: #41c257;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.1s;
+  }
+  .btn:hover{
+    background: #236d29;
+  }
+</style>
+<body>
+  <div class="small-container single-product">
+    <div class="row" style="border: 1px solid black; border-radius: 10px;">
+      <div class="col-2">
+        <img src="Picture6.png" width="50%" id="ProductImg">
+      </div>
+      <div class="col-2">
+        <p>Home / Generator</p>
+        <h1>Generator</h1>
+        <h4>R10 000,00</h4>
+        <select>
+          <option>Small</option>
+          <option>Meduim</option>
+          <option>Large</option>
+        </select>
+        <input type="Number" value="1">
+        <a href="" class="btn"> Add to Cart </a>
+        <h3>Product Details<i class="fa fa-indent"></i></h3>
+        <br>
+        <p>This is product details This is product details This is product details
+          This is product details This is product details This is product details
+          This is product details This is product details This is product details
+          This is product details This is product details This is product details
+        </p>
+      </div>
+    </div>
+  </div>
+
+  </section>
+</body>
+</html>

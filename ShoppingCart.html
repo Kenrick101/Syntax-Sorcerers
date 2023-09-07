@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shooping Cart</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 20px 20px;
+
+      background: linear-gradient(to bottom right, #6a93c2, #093577);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .Cart-Container{
+      width: 70%;
+      height: fit-content;
+      padding-bottom: 10px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0px 25px 40px #00000033;
+    }
+    .Header{
+      margin: auto;
+      width: 90%;
+      height: 15%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .Heading{
+      font-size: 29px;
+      font-family: "Open Sans";
+      font-weight: 700;
+      color: #2F3841;
+      padding-bottom: 30px;
+      padding-top: 0px;
+    }
+    .Action{
+      font-size: 20px;
+      font-family: "Open Sans";
+      font-weight: 600;
+      color: #E44C4C;
+      cursor: pointer;
+      text-decoration: none;
+      padding-bottom: 30px;
+    }
+
+    .Cart-Items{
+      margin: auto;
+      width: 90%;
+      height: 30%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+    .image-box{
+      width: 15%;
+      text-align: center;
+    }
+    .about{
+      height: 100%;
+    }
+    .title{
+      padding-top: 5px;
+      line-height: 10px;
+      font-size: 32px;
+      font-family: "Open Sans";
+      font-weight: 800;
+      color: #202020;
+    }
+    .subtitle{
+      line-height: 10px;
+      font-size: 18px;
+      font-family: "Open Sans";
+      font-weight: 600;
+      color: #909090;
+    }
+    .counter{
+      width: 15%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #d9d9d9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-family: "Open Sans";
+      font-weight: 900;
+      color: #202020;
+      cursor: pointer;
+    }
+    .count{
+      font-size: 20px;
+      font-family: "Open Sans";
+      font-weight: 900;
+      color: #202020;
+      width: 20px;
+      text-align: center;
+      border-color: rgb(0, 0, 0);
+      border-radius: 10px;
+    }
+    .prices{
+      height: 100%;
+      text-align: right;
+    }
+    .amount{
+      padding-top: 20px;
+      font-size: 26px;
+      font-family: "Open Sans";
+      font-weight: 800;
+      color: #202020;
+    }
+    .save{
+      padding-top: 5px;
+      font-size: 14px;
+      font-family: "Open Sans";
+      font-weight: 600;
+      color: #1687d9;
+      cursor: pointer;
+    }
+    .remove{
+      padding-top: 5px;
+      font-size: 14px;
+      font-family: "Open Sans";
+      font-weight: 600;
+      color: #E44C4C;
+      cursor: pointer;
+    }
+
+    hr{
+      width: 66%;
+      float: right;
+      margin-right: 5%;
+      margin-bottom: 15px;
+    }
+    .checkout{
+      float: right;
+      margin-right: 5%;
+      width: 28%;
+    }
+    .total{
+      width: 108%;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    }
+    .Subtotal{
+      font-size: 22px;
+      font-family: "Open Sans";
+      font-weight: 700;
+      color: #202020;
+    }
+    .items{
+      font-size: 16px;
+      font-family: "Open Sans";
+      font-weight: 500;
+      color: #909090;
+      line-height: 10px;
+    }
+    .total-amount{
+      font-size: 36px;
+      font-family: "Open Sans";
+      font-weight: 900;
+      color: #202020;
+    }
+    .button{
+      margin-top: 5px;
+      width: 100%;
+      height: 40px;
+      border: none;
+      background: linear-gradient(to bottom right, #3d9b26, #0e913a);
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: "Open Sans";
+      font-weight: 600;
+      color: #202020;
+    }
+    .button:hover{
+      background: linear-gradient(to bottom right, #2d812a, #0b7e1e);
+    }
+    img{
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="Cart-Container">
+    <div class="Header">
+      <h3 class="Heading">Shopping Cart</h3>
+      <h5 class="Action">Remove all</h5>
+    </div>
+    <div class="Cart-Items">
+      <div class="image-box">
+        <img src="Picture4.png"/>
+      </div>
+      <div class="about">
+        <h1 class="title">Gemerator</h1>
+        <h3 class="subtitle">250WaTT</h3>
+      </div>
+      <div class="counter">
+        <div class="btn" id="subtract">-</div>
+        <input class="count" value="0" readonly>
+        <div class="btn" id="add">+</div>
+      </div>
+      <div class="prices">
+        <div class="amount">R9 799.99</div>
+        <div class="remove">Remove</div>
+      </div>
+      
+    </div>
+    <div class="Cart-Items">
+      <div class="image-box">
+        <img src="Picture6.png"/>
+      </div>
+      <div class="about">
+        <h1 class="title">Solar Panel</h1>
+        <h3 class="subtitle">250WaTT</h3>
+      </div>
+      <div class="counter">
+        <div class="btn" id="subtract">-</div>
+        <input class="count" value="0" readonly>
+        <div class="btn" id="add">+</div>
+      </div>
+      <div class="prices">
+        <div class="amount">R9 799.99</div>
+        <div class="remove">Remove</div>
+      </div>
+    </div>
+
+    
+
+    <hr> 
+
+    <div class="checkout">
+      <div class="total">
+        <div>
+          <div class="Subtotal">Total</div>
+          <div class="items">2 items</div>
+        </div>
+        <div class="total-amount">R19 599.99</div>
+      </div>
+      <button class="button">Checkout</button>
+    </div>
+
+  </div>
+  <script type="text/javascript">
+   let btnAdd = document.querySelector('#add');
+   let btnSubtract = document.querySelector('#subtract');
+   let input = document.querySelector('input');
+   btnAdd.addEventListener('click' , ()=>{
+    input.value = parseInt(input.value++)+1
+   });
+   btnSubtract.addEventListener('click' , ()=>{
+    if(input.value>0){
+      input.value = parseInt(input.value)-1
+    }
+    
+  });
+
+  </script>
+
+
+</body>
+
+</html>
