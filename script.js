@@ -10,5 +10,4 @@ function changeCss () {
        navElement.style.backgroundColor = "";
     }
  }
- 
-   window.addEventListener("scroll", changeCss , false);
+window.addEventListener("scroll", changeCss , false);

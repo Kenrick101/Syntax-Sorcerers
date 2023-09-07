@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./navbar.css">
 
   <style media="screen">
 
@@ -21,7 +22,7 @@
 
     body{
       background-color: #080710;
-      background-image: url("images/solar-panels.jpg");
+      background-image: url("images/main-banner-solar-pannels.jpg");
       background-size: cover;
       background-attachment: fixed;
     }
@@ -65,7 +66,7 @@
     form{
       height: 450px;
       width: 400px;
-      background-color: rgba(255,255,255,0.13);
+      background-color: rgba(0,0,0,0.43);
       position: absolute;
       transform: translate(-50%,-50%);
       top: 50%;
@@ -137,27 +138,25 @@
       background-color: #b4b7c4;
     }
 
-    .nav-bar{
-      background-color: black;
-    }
-
   </style>
 </head>
 <body>
-  <div class="row">
-    <div class="nav-bar grid">
-        <div class="logo-container"><a href="/Home.html"><img class="logo" src="./images/WaTT_Logo.png"></a></div>
-        <div class="flex-row nav-options">
-          
-          <div><h2><a href="">Products</a></h2></div>
-          <div><h2>|</h2></div>
-          <div><h2><a href="">About Us</a></h2></div>
-          <div><h2>|</h2></div>
-          <div><h2><a href="Register.html">Register</a></h2></div>
-          
-        </div>
-    </div>
-  </div>
+  <div class="nav-bar flex-row">
+    <div class="logo-container"><a href="/Home.html"><img class="logo" src="./images/WaTT_Logo.png"></a></div>
+    <ul class="nav-options flex-row">
+      <li><input class="search-bar" type="search" placeholder="Looking for something?"></li>
+      <li><a href="#">Products</a></li>
+      <li>|</li>
+      <li><a href="#">About Us</a></li>
+      <li>|</li>
+      <li><a href="./Login.html">Login</a></li>
+      <li>|</li>
+      <li><a href="./Register.html">Register</a></li>
+      <li>|</li>
+      <li><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+    </ul>
+    <div class="narrow-menu-option"><img src="./images/menu-circle.svg" alt="menu icon" height="50px"></div>
+</div>
 
     <div class="background">
       <div class="shape"></div>
@@ -168,7 +167,7 @@
       <h3>Login Here</h3>
 
       <label for="username">Username</label>
-      <input class="text-input" type="text" placeholder="Email or Phone" id="username">
+      <input class="text-input" type="text" placeholder="Email" id="username">
 
       <label for="password">Password</label>
       <input class="text-input" type="password" placeholder="Password" id="password">

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./product-page(style).css">
+  <link rel="stylesheet" href="./navbar.css">
 
   <title>WaTT</title>
 
@@ -28,26 +29,16 @@
     .main-banner{
       width: 100%;
       height: 100vh;
-      grid-template-columns: 1fr;
-      grid-template-rows: 10vh 90vh;
-      background-image: url("images/solar-panels.jpg");
+      background-image: url("images/main-banner-solar-pannels.jpg");
       background-attachment: fixed;
       background-size: cover;
-    }
-
-    .hero-container{
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-      grid-column: span -1;
-      grid-row: span 2;
     }
 
     .hero-content{
       width: 100%;
       justify-content: center;
       align-items: center;
-      height: 100%;
+      height: 100vh;
     }
 
     .hero-heading
@@ -124,35 +115,63 @@
 </head>
 <body>
 
-  <div class="grid main-banner">
-    <div class="row">
-      <div class="nav-bar grid">
-          <div class="logo-container"><a href="/Home.html"><img class="logo" src="./images/WaTT_Logo.png"></a></div>
-          <div class="flex-row nav-options">
-            <div class="search-container"><input class="search-bar" type="search" placeholder="Looking for something?"></div>
-            <div><h2>|</h2></div>
-            <div><h2><a href="">Products</a></h2></div>
-            <div><h2>|</h2></div>
-            <div><h2><a href="">About Us</a></h2></div>
-            <div><h2>|</h2></div>
-            <div><h2><a href="Login.html">Login</a></h2></div>
-            <div><h2>|</h2></div>
-            <div><h2><a href="Register.html">Register</a></h2></div>
-            <div><h2>|</h2></div>
-            <div><h2><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></h2></div>
+  <section class="navigation-bar">
+    <div class="nav-bar flex-row">
+        <div class="logo-container"><a href="/Home.html"><img class="logo" src="./images/WaTT_Logo.png"></a></div>
+        <ul class="nav-options flex-row">
+          <li><input class="search-bar" type="search" placeholder="Looking for something?"></li>
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn" href="#">Products</button>
+              <div class="drop-content">
+                <a href="./Product-Page(Generators).html">Generators</a>
+                <a href="./product-page(solar-panels).html">Solar Panels</a>
+                <a href="./Product_Page(Inverters).html">Inverters</a>
+                <a href="./Product_Page(Batteries).html">Batteries</a>
+                <a href="./Product_Page(Lights).html">Lights</a>
+                <a href="./Product_Page(Other).html">Other</a>
+              </div>
+            </div>
+          </li>
+          <li>|</li>
+          <li><a href="#">About Us</a></li>
+          <li>|</li>
+          <li><a href="./Login.html">Login</a></li>
+          <li>|</li>
+          <li><a href="./Register.html">Register</a></li>
+          <li>|</li>
+          <li><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+        </ul>
+        <div class="dropdown">
+          <div class="narrow-menu-option menu-button"><img src="./images/menu-circle.svg" alt="menu icon" height="100%"></div>
+          <div class="mobile-menu-content">
+            <a>Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <a href="./Login.html">Login</a>
+            <a href="./Register.html">Register</a>
+            <div class="mobile-products-dropdown">
+              <button class="mobile-prod-btn" href="#">Products</button>
+              <div class="mobile-prod-content">
+                <a href="./Product-Page(Generators).html">Generators</a>
+                <a href="./product-page(solar-panels).html">Solar Panels</a>
+                <a href="./Product_Page(Inverters).html">Inverters</a>
+                <a href="./Product_Page(Batteries).html">Batteries</a>
+                <a href="./Product_Page(Lights).html">Lights</a>
+                <a href="./Product_Page(Other).html">Other</a>
+              </div>
+            </div>
+            <a href="#">About Us</a>
           </div>
-      </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="hero-container flex-col">
+  </section>
+
+      <div class="main-banner">
         <div class="hero-content flex-col">
             <div class="hero-heading"><h1>Feeling stuck in the dark?</h1></div>
             <div class="hero-body"><h2>With us the lights stay on.</h2></div>
             <img class="light-bulb" src="./images/lightbulb-02-svgrepo-com.svg" alt="light bulb" height="80px">
         </div>
-      </div>
     </div>
-  </div>
 
   <h2 class="products-title">Our Products</h2>
 
@@ -182,7 +201,7 @@
             </div>
     </div></a>
     <a href="./Product_Page(Lights).html"><div class="product-category product-container flex-col">
-      <div class="product-img flex-col"><img src="./images/Light_Category_Image.png" alt="Lights Product" width="200px"></div>
+      <div class="product-img flex-col"><img src="./images/Light_Category_Image.png" alt="Lights Product" height="250px"></div>
             <div class="product-info-container flex-col">
                 <h2 class="category-title">Lights</h2>
             </div>
@@ -204,7 +223,9 @@
         <p class="copyright">WaTT - All rights reserved © 2023</p>
     </footer>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="./script.js"></script>
+<script src="./navbar.js"></script>
 
 </body>
 </html>
