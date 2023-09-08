@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33801.447
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watt_Backend", "Watt_Backend\Watt_Backend.csproj", "{BDEEC20D-1661-4339-B8AD-61F38E7AD38F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDEEC20D-1661-4339-B8AD-61F38E7AD38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDEEC20D-1661-4339-B8AD-61F38E7AD38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDEEC20D-1661-4339-B8AD-61F38E7AD38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDEEC20D-1661-4339-B8AD-61F38E7AD38F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE4492C7-DA05-43E8-BB31-4A5D558C33A1}
+	EndGlobalSection
+EndGlobal
