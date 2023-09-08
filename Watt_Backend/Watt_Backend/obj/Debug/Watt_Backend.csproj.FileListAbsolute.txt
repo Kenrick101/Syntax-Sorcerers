@@ -1,7 +1,0 @@
-C:\Users\kenri\OneDrive - University of Johannesburg\Informatics\IFM2B\Group Project\Watt_Backend\Watt_Backend\bin\Watt_Backend.dll.config
-C:\Users\kenri\OneDrive - University of Johannesburg\Informatics\IFM2B\Group Project\Watt_Backend\Watt_Backend\bin\Watt_Backend.dll
-C:\Users\kenri\OneDrive - University of Johannesburg\Informatics\IFM2B\Group Project\Watt_Backend\Watt_Backend\bin\Watt_Backend.pdb
-C:\Users\kenri\OneDrive - University of Johannesburg\Informatics\IFM2B\Group Project\Watt_Backend\Watt_Backend\obj\Debug\Watt_Backend.csproj.AssemblyReference.cache
-C:\Users\kenri\OneDrive - University of Johannesburg\Informatics\IFM2B\Group Project\Watt_Backend\Watt_Backend\obj\Debug\Watt_Backend.csproj.CoreCompileInputs.cache
-C:\Users\kenri\OneDrive - University of Johannesburg\Informatics\IFM2B\Group Project\Watt_Backend\Watt_Backend\obj\Debug\Watt_Backend.dll
-C:\Users\kenri\OneDrive - University of Johannesburg\Informatics\IFM2B\Group Project\Watt_Backend\Watt_Backend\obj\Debug\Watt_Backend.pdb
