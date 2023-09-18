@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <title>Cart</title>
+
+    <style>
+     body{
+      background-color: #2C3639;;
+     }
+
+     .cart-section{
+      width: 100%;
+      height: 100vh;
+      background-image: url("images/cart-background.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+      justify-content: center;
+      align-items: center;
+     }
+
+     .info-container{
+      justify-content: space-between;
+      width: 90vw;
+      height: 80vh;
+      position: fixed;
+      border-radius: 15px;
+      color: black;
+      text-align: center;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 75% 25%;
+      gap: 20px;
+     }
+
+
+     .col{
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+     }
+
+     .items-container{
+      overflow-y: scroll;
+      border-radius: 10px;
+      margin-top: 100px;
+      padding: 20px;
+     }
+
+     .heading{
+      text-align: left;
+      padding: 20px;
+      margin: 0;
+     }
+
+     .cart-summary-large{
+      align-items: left;
+      justify-content: space-between;
+      padding: 30px;
+      height: 20vh;
+      background-color: #2C3639;
+      color: white;
+      border-top: 5px solid rgb(22, 185, 235) ;
+     }
+
+     .checkout-btn{
+      height: 90px;
+      width: 100%;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: larger;
+     }
+
+     .checkout-btn:hover{
+      transform: translateY(2px);
+     }
+
+     .item{
+      width: 100%;
+      height: 175px;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 70% 25% 5%;
+      grid-auto-rows: 175px;
+      border-bottom: 1px solid #2C3639;
+      border-top: 1px solid #2C3639;
+      margin-bottom: 10px;
+     }
+
+     .item:hover{
+      transform: translateY(2px);
+     }
+
+     .heading-container
+     {
+      width: 67.5%;
+      border-radius: 10px;
+      padding: 0px;
+      background-color: #2C3639;
+      color: white;
+      position: fixed;
+      border-bottom: 5px solid rgb(22, 185, 235);
+      
+     }
+
+     .image-info-container{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px;
+     }
+
+     .image-info-container > div{
+      align-items: flex-start;
+      align-self: flex-start;
+      text-align: left;
+     }
+
+     .image-info-container > div > h2{
+      margin-bottom: 0;
+     }
+
+     .image-info-container > div > p{
+      margin-top: 5px;
+     }
+
+     .quantity-info-container
+     {
+      display: flex;
+      text-align: left;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+     }
+
+     .product-img
+     {
+      max-height: 160px;
+      max-width: 200px;
+     }
+
+     .product-img-container{
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     }
+
+     .summary-heading{
+      text-decoration: underline;
+      text-decoration-color: rgb(22, 185, 235);
+      text-underline-offset: 8px;
+      text-align: left;
+      padding-bottom: 0;  
+      margin-bottom: 20px;
+      margin-top: 0;
+     }
+
+     .total-heading{
+      text-align: left;
+      margin-bottom: 10px;
+     }
+
+     span{
+      font-size: small;
+      font-weight: 200;
+     }
+
+     .cart-summary-small
+     {
+      width: 100%;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh;
+      position: fixed;
+      background-color: #2C3639;
+      align-self: flex-end;
+      z-index: 1;
+      border-top: 4px solid rgb(22, 185, 235);
+      padding: 10px;
+     }
+
+     .quantity-selector{
+      height: 35px;
+      background-color: rgb(210, 210, 210);
+      border-radius: 10px;
+     }
+
+     .amount-label{
+      width: 30px;
+      color: black;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-weight: bold;
+     }
+
+     .quantity-button{
+      width: 35px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      background-color: #2C3639;
+      color: white;
+     }
+
+     .quantity-button:hover{
+      color: rgb(22, 185, 235);
+      transform: translateY(1px);
+     }
+
+     .remove-container{
+      align-items: center;
+      justify-content: center;
+    }
+
+     .remove-container:hover{
+      transition: 0.4s;
+      background-color: #EF6262;
+      border-radius: 0px 10px 10px 0px;
+     }
+
+     ::-webkit-scrollbar{
+      width: 8px;
+     }
+
+     /* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0px 10px 10px 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+     .cart-summary-small > div{
+        padding-left: 10px;
+     }
+
+     @media screen and (max-width: 1500px)
+     {
+        .info-container{
+          grid-template-columns: 100%;
+          grid-template-rows: 80% 20%;
+        }
+
+        .heading-container{
+          width: 90vw;
+        }
+
+        .cart-summary-large{
+          display: none;
+        }
+
+        .cart-summary-small{
+          display: flex;
+        }
+
+        .summary-heading{
+          font-size: large;
+        }
+
+        .total-heading{
+          font-size: medium;
+        }
+
+        .checkout-btn{
+          width: 250px;
+          margin-right: 30px;
+          height: 50px;
+        }
+
+     }
+
+     @media screen and (max-width: 550px)
+     {
+      .cart-summary-small{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 17vh;
+      }
+
+      .checkout-btn{
+        width: 90%;
+        height: 80px;
+        margin: 0;
+      }
+
+      .summary-text{
+        align-self: flex-start;
+        padding-bottom: 5px;
+      }
+
+      .items-container{
+        padding-top: 8px;
+      }
+
+      .item{
+        grid-template-columns: 1fr;
+        grid-template-rows: 75% 15% 10%;
+        height: 350px;
+      }
+
+      .product-img-container{
+        width: 100%;
+        height: 175px !important;
+      }
+
+      .image-info-container{
+        flex-direction: column;
+      }
+
+      .image-info-container  p{
+        margin-bottom: 0;
+
+      }
+
+      .product-img{
+        align-self: center;
+        margin-top: 5px;
+      }
+
+      .quantity-info-container{
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 0px;
+        margin-bottom: 10px;
+      }
+
+      .remove-container{
+        border-radius: 0px 0px 10px 10px !important;
+      }
+
+      .remove-icon{
+        height: 85%;
+      }
+     }
+     
+    </style>
+
+</head>
+<body>
+    <section class="navigation-bar">
+        <div class="nav-bar flex-row">
+            <div class="logo-container"><a href="/Home.html"><img class="logo" src="./images/WaTT_Logo.png"></a></div>
+            <ul class="nav-options flex-row">
+              <li><input class="search-bar" type="search" placeholder="Looking for something?"></li>
+              <li>
+                <div class="dropdown">
+                  <button class="dropbtn" href="#">Products</button>
+                  <div class="drop-content">
+                    <a href="./Product-Page(Generators).html">Generators</a>
+                    <a href="./product-page(solar-panels).html">Solar Panels</a>
+                    <a href="./Product_Page(Inverters).html">Inverters</a>
+                    <a href="./Product_Page(Batteries).html">Batteries</a>
+                    <a href="./Product_Page(Lights).html">Lights</a>
+                    <a href="./Product_Page(Other).html">Other</a>
+                  </div>
+                </div>
+              </li>
+              <li>|</li>
+              <li><a href="#">About Us</a></li>
+              <li>|</li>
+              <li><a href="./Login.html">Login</a></li>
+              <li>|</li>
+              <li><a href="./Register.html">Register</a></li>
+            </ul>
+            <div class="dropdown">
+              <div class="narrow-menu-option menu-button"><img src="./images/menu-circle.svg" alt="menu icon" height="100%"></div>
+              <div class="mobile-menu-content">
+                <a href="./Cart.html">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <a href="./Login.html">Login</a>
+                <a href="./Register.html">Register</a>
+                <div class="mobile-products-dropdown">
+                  <button class="mobile-prod-btn" href="#">Products</button>
+                  <div class="mobile-prod-content">
+                    <a href="./Product-Page(Generators).html">Generators</a>
+                    <a href="./product-page(solar-panels).html">Solar Panels</a>
+                    <a href="./Product_Page(Inverters).html">Inverters</a>
+                    <a href="./Product_Page(Batteries).html">Batteries</a>
+                    <a href="./Product_Page(Lights).html">Lights</a>
+                    <a href="./Product_Page(Other).html">Other</a>
+                  </div>
+                </div>
+                <a href="#">About Us</a>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="cart-section flex-row">
+        <div class="info-container">
+          <div class="heading-container"><h1 class="heading">Your Stuff</h1></div>
+          <div class="items-container col">
+
+            <div class="item">
+              <div class="image-info-container"><div class="product-img-container"><img class="product-img" src="./images/large-generator-product.png" alt="generator product"></div>
+                <div class="flex-col"><h2>Generator x1000</h2>
+                  <p>Generators</p>
+                </div>
+              </div>
+              <div class="quantity-info-container">
+                <h2>R30 000</h2>
+                <div class="quantity-selector flex-row">
+                  <button class="quantity-button plus-btn">+</button>
+                  <div class="amount-label">1</div>
+                  <button class="quantity-button minus-btn">-</button>
+                </div>
+              </div>
+              <div class="remove-container flex-col">
+                <img class="remove-icon" src="./images/trash-icon.svg" alt="" width="90%">
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image-info-container"><div class="product-img-container"><img class="product-img" src="./images/solar-panel-product.png" alt="generator product"></div>
+                <div class="flex-col"><h2>Generator x1000</h2>
+                  <p>Generators</p>
+                </div>
+              </div>
+              <div class="quantity-info-container">
+                <h2>R30 000</h2>
+                <div class="quantity-selector flex-row">
+                  <button class="quantity-button plus-btn">+</button>
+                  <div class="amount-label">1</div>
+                  <button class="quantity-button minus-btn">-</button>
+                </div>
+              </div>
+              <div class="remove-container flex-col">
+                <img class="remove-icon" src="./images/trash-icon.svg" alt="" width="90%">
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image-info-container"><div class="product-img-container"><img class="product-img" src="./images/small-generator-product.png" alt="generator product"></div>
+                <div class="flex-col"><h2>Generator x1000</h2>
+                  <p>Generators</p>
+                </div>
+              </div>
+              <div class="quantity-info-container">
+                <h2>R30 000</h2>
+                <div class="quantity-selector flex-row">
+                  <button class="quantity-button plus-btn">+</button>
+                  <div class="amount-label">1</div>
+                  <button class="quantity-button minus-btn">-</button>
+                </div>
+              </div>
+              <div class="remove-container flex-col">
+                <img class="remove-icon" src="./images/trash-icon.svg" alt="" width="90%">
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image-info-container"><div class="product-img-container"><img class="product-img" src="./images/small-solar-panel-product.png" alt="generator product"></div>
+                <div class="flex-col"><h2>Generator x1000</h2>
+                  <p>Generators</p>
+                </div>
+              </div>
+              <div class="quantity-info-container">
+                <h2>R30 000</h2>
+                <div class="quantity-selector flex-row">
+                  <button class="quantity-button plus-btn">+</button>
+                  <div class="amount-label">1</div>
+                  <button class="quantity-button minus-btn">-</button>
+                </div>
+              </div>
+              <div class="remove-container flex-col">
+                <img class="remove-icon" src="./images/trash-icon.svg" alt="" width="90%">
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image-info-container"><div class="product-img-container"><img class="product-img" src="./images/generator_pic.png" alt="generator product"></div>
+                <div class="flex-col"><h2>Generator x1000</h2>
+                  <p>Generators</p>
+                </div>
+              </div>
+              <div class="quantity-info-container">
+                <h2>R30 000</h2>
+                <div class="quantity-selector flex-row">
+                  <button class="quantity-button plus-btn">+</button>
+                  <div class="amount-label">1</div>
+                  <button class="quantity-button minus-btn">-</button>
+                </div>
+              </div>
+              <div class="remove-container flex-col">
+                <img class="remove-icon" src="./images/trash-icon.svg" alt="" width="90%">
+              </div>
+            </div>
+
+          </div>
+          <div class="col cart-summary-large flex-col">
+            <h2 class="summary-heading">Cart Summary</h2>
+            <h3 class="total-heading">Total<span class="items count">(1 Items)</span>: R30 0000</h3>
+            <button class="checkout-btn">Checkout</button>
+          </div>
+        </div>
+
+
+        <div class="cart-summary-small flex-row">
+          <div class="summary-text"><h2 class="summary-heading">Cart Summary</h2>
+          <h3 class="total-heading">Total<span class="items count">(1 Items)</span>: R30 0000</h3></div>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      <script src="./script.js"></script>
+      <script src="./navbar.js"></script>
+
+
+      <script>
+        $(".plus-btn").click(function(){
+           var currentAmount = $(".amount-label").text();
+           var newNum = Number(currentAmount) + 1;
+           $(".amount-label").text(newNum);
+        })
+
+        $(".minus-btn").click(function(){
+           var currentAmount = $(".amount-label").text();
+           if(currentAmount > 1)
+           {
+            var newNum = Number(currentAmount) - 1;
+            $(".amount-label").text(newNum);
+           }
+        })
+      </script>
+</body>
+</html>

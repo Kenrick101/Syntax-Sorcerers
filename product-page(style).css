@@ -177,6 +177,7 @@ p
 
     .clip-art-generator{
         width: 200px;
+        max-height: 200px;
     }
 
     @media(width < 680px)
